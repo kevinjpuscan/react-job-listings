@@ -5,7 +5,7 @@
 # Preview
 
 To see the home page in operation follow the link below
-[https://kevinjpuscan.github.io/react-job-listings//](https://kevinjpuscan.github.io/react-job-listings//)
+[https://kevinjpuscan.github.io/react-job-listings/](https://kevinjpuscan.github.io/react-job-listings/)
 
 # Available Scripts
 
