@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import imgClose from "../images/close.svg";
+import imgClose from "../images/icon-remove.svg";
 import { connect } from "react-redux";
 
 export const TagButtonStyled = styled.span`
@@ -23,15 +23,17 @@ export const TagButtonStyled = styled.span`
     background-image: url(${imgClose});
     width: 30px;
 
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: 50%;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     :hover {
       background: var(--very-dark-gray);
       background-image: url(${imgClose});
-      background-repeat: none;
+      background-repeat: no-repeat;
       background-position: center;
+      background-size: 50%;
       border-radius: 0 5px 5px 0;
     }
   }
