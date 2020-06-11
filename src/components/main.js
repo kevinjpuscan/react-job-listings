@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgMobile from "../images/bg-header-mobile.svg";
+import imgDesktop from "../images/bg-header-desktop.svg";
 import Wrapper from "./wrapper";
 import Card from "./card";
 import Search from "./search";
@@ -23,6 +24,12 @@ export const MainStyled = styled.div`
 
   .list-result {
     margin-top: 1em;
+  }
+
+  @media (min-width: 1440px) {
+    .header {
+      background-image: url(${imgDesktop});
+    }
   }
 `;
 

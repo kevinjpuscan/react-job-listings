@@ -9,6 +9,12 @@ export const TagStyled = styled.span`
   background: var(--background);
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background: var(--dark-cyan);
+    color: white;
+    font-size: 0.9em;
+  }
 `;
 
 function Tag({ children }) {

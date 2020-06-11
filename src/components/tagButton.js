@@ -26,6 +26,13 @@ export const TagButtonStyled = styled.span`
     background-position: center;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    :hover {
+      background: var(--very-dark-gray);
+      background-image: url(${imgClose});
+      background-repeat: none;
+      background-position: center;
+      border-radius: 0 5px 5px 0;
+    }
   }
 `;
 
