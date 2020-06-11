@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Feature from "./feature";
 import Tag from "./tag";
-import img from "../images/shortly.svg";
+
 export const CardStyled = styled.div`
   background: white;
   min-height: 255px;
@@ -49,6 +49,7 @@ export const CardStyled = styled.div`
   .title {
     font-weight: 700;
     margin-top: 15px;
+    cursor: pointer;
     color: var(--very-dark-gray);
     :hover {
       color: var(--dark-cyan);
@@ -146,37 +147,42 @@ export const CardStyled = styled.div`
     }
   }
 `;
-function Card() {
+function Card({ el, image }) {
   return (
     <CardStyled>
       <div className="line-card"></div>
       <div className="content-card">
         <div className="header-tab">
           <div className="img-icon">
-            <img src={img} alt="shortly"></img>
+            <img src={image} alt={el.company}></img>
           </div>
 
           <div className="detail-card">
             <div className="feactures">
-              <span className="category">Photoshop</span>
-              <Feature type="new" text="NEW!" />
-              <Feature type="featured" text="FEATURED!" />
+              <span className="category">{el.company}</span>
+              {el.new && <Feature type="new" text="NEW!" />}
+              {el.featured && <Feature type="featured" text="FEATURED" />}
             </div>
-            <div className="title">Senior Frontend Developer</div>
+
+            <div className="title">{el.position}</div>
+
             <div className="description">
-              <span className="description-detail">1d Ago</span>
-              <span className="description-detail points">Full Time</span>
-              <span className="description-detail">Remote</span>
+              <span className="description-detail">{el.postedAt}</span>
+              <span className="description-detail points">{el.contract}</span>
+              <span className="description-detail">{el.location}</span>
             </div>
           </div>
         </div>
 
         <p className="tags-content">
-          <Tag>Frontend</Tag>
-          <Tag>Senior</Tag>
-          <Tag>HTML</Tag>
-          <Tag>CSS</Tag>
-          <Tag>Jvascript</Tag>
+          <Tag key="role">{el.role}</Tag>
+          <Tag key="lvl">{el.level}</Tag>
+          {el.languages.map((lang, idx) => (
+            <Tag key={idx + "l"}>{lang}</Tag>
+          ))}
+          {el.tools.map((tool, idx) => (
+            <Tag key={idx + "t"}>{tool}</Tag>
+          ))}
         </p>
       </div>
     </CardStyled>

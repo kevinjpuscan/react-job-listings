@@ -5,6 +5,9 @@ import imgDesktop from "../images/bg-header-desktop.svg";
 import Wrapper from "./wrapper";
 import Card from "./card";
 import Search from "./search";
+import data from "../data.json";
+import images from "../images/index.js";
+import { connect } from "react-redux";
 
 export const MainStyled = styled.div`
   min-height: 100vh;
@@ -33,21 +36,55 @@ export const MainStyled = styled.div`
   }
 `;
 
-function Main() {
-  return (
-    <MainStyled>
-      <div className="header"></div>
-      <div className="result">
-        <Wrapper>
-          <Search />
-          <div className="list-result">
-            <Card />
-            <Card />
-          </div>
-        </Wrapper>
-      </div>
-    </MainStyled>
-  );
+class Main extends React.Component {
+  isShow = job => {
+    let tags = [job.role, job.level, ...job.languages, ...job.tools];
+
+    let show = true;
+    for (let i = 0; i < this.props.filters.length; i++) {
+      if (tags.indexOf(this.props.filters[i]) < 0) {
+        show = false;
+      }
+    }
+
+    return show;
+  };
+
+  render() {
+    return (
+      <MainStyled>
+        <div className="header"></div>
+        <div className="result">
+          <Wrapper>
+            <Search />
+            <div className="list-result">
+              {data.map(
+                (el, idx) =>
+                  this.isShow(el) && (
+                    <Card key={idx} el={el} image={images[el.logo]} />
+                  )
+              )}
+            </div>
+          </Wrapper>
+        </div>
+      </MainStyled>
+    );
+  }
 }
 
-export default Main;
+const mapStateToProps = state => {
+  return {
+    filters: state.filters
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main);

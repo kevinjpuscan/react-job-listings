@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgClose from "../images/close.svg";
+import { connect } from "react-redux";
 
 export const TagButtonStyled = styled.span`
   display: inline-flex;
@@ -36,13 +37,36 @@ export const TagButtonStyled = styled.span`
   }
 `;
 
-function TagButton({ children, handleClose }) {
-  return (
-    <TagButtonStyled>
-      <span>{children}</span>
-      <button onClick={handleClose} className="btn-tag"></button>
-    </TagButtonStyled>
-  );
+class TagButton extends React.Component {
+  handleClose = () => {
+    this.props.dispatch({
+      type: "REMOVE_FILTER",
+      payload: this.props.children
+    });
+  };
+  render() {
+    return (
+      <TagButtonStyled>
+        <span>{this.props.children}</span>
+        <button onClick={this.handleClose} className="btn-tag"></button>
+      </TagButtonStyled>
+    );
+  }
 }
 
-export default TagButton;
+const mapStateToProps = state => {
+  return {
+    filters: state.filters
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TagButton);

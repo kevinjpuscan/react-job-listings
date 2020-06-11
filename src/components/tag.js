@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
 
 export const TagStyled = styled.span`
   font-size: 0.9em;
@@ -17,8 +18,32 @@ export const TagStyled = styled.span`
   }
 `;
 
-function Tag({ children }) {
-  return <TagStyled>{children}</TagStyled>;
+class Tag extends React.Component {
+  handleClick = () => {
+    if (this.props.filters.indexOf(this.props.children) < 0) {
+      this.props.dispatch({ type: "ADD_FILTER", payload: this.props.children });
+    }
+  };
+  render() {
+    return (
+      <TagStyled onClick={this.handleClick}>{this.props.children}</TagStyled>
+    );
+  }
 }
 
-export default Tag;
+const mapStateToProps = state => {
+  return {
+    filters: state.filters
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Tag);

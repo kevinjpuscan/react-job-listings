@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import TagButton from "./tagButton";
+import { connect } from "react-redux";
 
 export const SearchStyled = styled.div`
   background: white;
@@ -33,50 +34,40 @@ export const SearchStyled = styled.div`
   }
 `;
 class Search extends Component {
+  handleClear = () => {
+    this.props.dispatch({ type: "CLEAR_FILTER" });
+  };
   render() {
     return (
-      <SearchStyled>
-        <p className="input-content">
-          <TagButton
-            handleClose={() => {
-              console.log("close");
-            }}
-          >
-            Javascript
-          </TagButton>
-          <TagButton
-            handleClose={() => {
-              console.log("close");
-            }}
-          >
-            CSS
-          </TagButton>
-          <TagButton
-            handleClose={() => {
-              console.log("close");
-            }}
-          >
-            CSS
-          </TagButton>
-          <TagButton
-            handleClose={() => {
-              console.log("close");
-            }}
-          >
-            CSS
-          </TagButton>
-          <TagButton
-            handleClose={() => {
-              console.log("close");
-            }}
-          >
-            CSS
-          </TagButton>
-        </p>
-        <button className="btn-clear">clear</button>
-      </SearchStyled>
+      this.props.filters.length > 0 && (
+        <SearchStyled>
+          <p className="input-content">
+            {this.props.filters.map((filter, idx) => (
+              <TagButton key={idx}>{filter}</TagButton>
+            ))}
+          </p>
+          <button className="btn-clear" onClick={this.handleClear}>
+            clear
+          </button>
+        </SearchStyled>
+      )
     );
   }
 }
 
-export default Search;
+const mapStateToProps = state => {
+  return {
+    filters: state.filters
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search);
