@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-job-listings/static/css/main.a288ec06.chunk.css",
-    "main.js": "/react-job-listings/static/js/main.7e4247c2.chunk.js",
-    "main.js.map": "/react-job-listings/static/js/main.7e4247c2.chunk.js.map",
+    "main.js": "/react-job-listings/static/js/main.f33486ac.chunk.js",
+    "main.js.map": "/react-job-listings/static/js/main.f33486ac.chunk.js.map",
     "runtime-main.js": "/react-job-listings/static/js/runtime-main.72a81363.js",
     "runtime-main.js.map": "/react-job-listings/static/js/runtime-main.72a81363.js.map",
     "static/js/2.930024af.chunk.js": "/react-job-listings/static/js/2.930024af.chunk.js",
     "static/js/2.930024af.chunk.js.map": "/react-job-listings/static/js/2.930024af.chunk.js.map",
     "index.html": "/react-job-listings/index.html",
-    "precache-manifest.3cca39b9c8d4ac103db9a45bb018d3b9.js": "/react-job-listings/precache-manifest.3cca39b9c8d4ac103db9a45bb018d3b9.js",
+    "precache-manifest.a75244ee52718d8f745d5b95edf829dc.js": "/react-job-listings/precache-manifest.a75244ee52718d8f745d5b95edf829dc.js",
     "service-worker.js": "/react-job-listings/service-worker.js",
     "static/css/main.a288ec06.chunk.css.map": "/react-job-listings/static/css/main.a288ec06.chunk.css.map",
     "static/js/2.930024af.chunk.js.LICENSE.txt": "/react-job-listings/static/js/2.930024af.chunk.js.LICENSE.txt",
     "static/media/account.svg": "/react-job-listings/static/media/account.9f72c13b.svg",
     "static/media/bg-header-desktop.svg": "/react-job-listings/static/media/bg-header-desktop.6e2f7196.svg",
     "static/media/bg-header-mobile.svg": "/react-job-listings/static/media/bg-header-mobile.6b5ff5a0.svg",
-    "static/media/close.svg": "/react-job-listings/static/media/close.437102d8.svg",
     "static/media/eyecam-co.svg": "/react-job-listings/static/media/eyecam-co.39eaebdf.svg",
     "static/media/faceit.svg": "/react-job-listings/static/media/faceit.76faa79f.svg",
+    "static/media/icon-remove.svg": "/react-job-listings/static/media/icon-remove.ae67c678.svg",
     "static/media/insure.svg": "/react-job-listings/static/media/insure.52b85a50.svg",
     "static/media/loop-studios.svg": "/react-job-listings/static/media/loop-studios.6c50fd74.svg",
     "static/media/manage.svg": "/react-job-listings/static/media/manage.fbe431a9.svg",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.72a81363.js",
     "static/js/2.930024af.chunk.js",
     "static/css/main.a288ec06.chunk.css",
-    "static/js/main.7e4247c2.chunk.js"
+    "static/js/main.f33486ac.chunk.js"
   ]
 }

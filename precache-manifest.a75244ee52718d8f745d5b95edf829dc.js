@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66fc9ea4b7061f830b83efc9a5651569",
+    "revision": "399dad7be625fc7e06fbc32021408f43",
     "url": "/react-job-listings/index.html"
   },
   {
-    "revision": "477cb20f6977a37e220e",
+    "revision": "8383eb95bea5d0e6d3a7",
     "url": "/react-job-listings/static/css/main.a288ec06.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-job-listings/static/js/2.930024af.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "477cb20f6977a37e220e",
-    "url": "/react-job-listings/static/js/main.7e4247c2.chunk.js"
+    "revision": "8383eb95bea5d0e6d3a7",
+    "url": "/react-job-listings/static/js/main.f33486ac.chunk.js"
   },
   {
     "revision": "29ca4f65f78a2fb39557",
@@ -36,16 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-job-listings/static/media/bg-header-mobile.6b5ff5a0.svg"
   },
   {
-    "revision": "437102d8083ab6ef8b3db05cbab6f885",
-    "url": "/react-job-listings/static/media/close.437102d8.svg"
-  },
-  {
     "revision": "39eaebdf1b82df9648392a9fb0915e9c",
     "url": "/react-job-listings/static/media/eyecam-co.39eaebdf.svg"
   },
   {
     "revision": "76faa79fba7225014706c0aac0b46472",
     "url": "/react-job-listings/static/media/faceit.76faa79f.svg"
+  },
+  {
+    "revision": "ae67c678a143e6c6b913629f3d3b55e9",
+    "url": "/react-job-listings/static/media/icon-remove.ae67c678.svg"
   },
   {
     "revision": "52b85a5018745489a50626498bc347ad",
