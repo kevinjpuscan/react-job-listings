@@ -9,4 +9,5 @@
   --filter-tables: hsl(180, 31%, 95%);
   --dark-gray: hsl(180, 8%, 52%);
   --very-dark-gray: hsl(180, 14%, 20%);
+  --gray: rgba(0, 0, 0, 0.3);
 }
