@@ -10,7 +10,7 @@ export const CardStyled = styled.div`
   overflow: hidden;
   display: flex;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 2em;
+  margin-top: 3em;
 
   .line-card {
     height: 255px;
@@ -106,6 +106,7 @@ export const CardStyled = styled.div`
 
   @media (min-width: 1440px) {
     min-height: auto;
+    margin-top: 1.5em;
     .line-card {
       height: auto;
     }
