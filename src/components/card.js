@@ -10,7 +10,7 @@ export const CardStyled = styled.div`
   overflow: hidden;
   display: flex;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 3em;
+  margin-top: 2em;
 
   .line-card {
     height: 255px;
@@ -160,8 +160,10 @@ function Card({ el, image }) {
           <div className="detail-card">
             <div className="feactures">
               <span className="category">{el.company}</span>
-              {el.new && <Feature type="new" text="NEW!" />}
-              {el.featured && <Feature type="featured" text="FEATURED" />}
+              {el.new && <Feature typeFeature="new" text="NEW!" />}
+              {el.featured && (
+                <Feature typeFeature="featured" text="FEATURED" />
+              )}
             </div>
 
             <div className="title">{el.position}</div>

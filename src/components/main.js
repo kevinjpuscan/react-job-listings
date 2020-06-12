@@ -26,7 +26,7 @@ export const MainStyled = styled.div`
   }
 
   .list-result {
-    margin-top: 1em;
+    margin-top: 5em;
   }
 
   @media (min-width: 1440px) {
