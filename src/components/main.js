@@ -29,7 +29,7 @@ export const MainStyled = styled.div`
     margin-top: 5em;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 800px) {
     .header {
       background-image: url(${imgDesktop});
     }

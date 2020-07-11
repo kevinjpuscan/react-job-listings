@@ -104,7 +104,7 @@ export const CardStyled = styled.div`
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 800px) {
     min-height: auto;
     margin-top: 1.5em;
     .line-card {
